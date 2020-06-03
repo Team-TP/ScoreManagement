@@ -11,15 +11,18 @@ namespace ScoreM
     {
         private ScoreManageDataContext db;
         protected void Page_Load(object sender, EventArgs e)
-        {       
+        {
+            string username = Session["username"].ToString();
+            accName.Text = username;
         }
 
         protected void btnChange_Click(object sender, EventArgs e)
         {
+            string id = Session["id"].ToString();
             db = new ScoreManageDataContext();
             var query = from i in db.Accounts
                         join j in db.Lecturers on i.Username equals j.ID
-                        where i.Username == "LEC02" && i.Password == txtoldPass.Text
+                        where i.Username == id && i.Password == txtoldPass.Text
                         select i;
             if(query.Any())
             {

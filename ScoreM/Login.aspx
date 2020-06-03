@@ -32,7 +32,6 @@
 </head>
 
 <body>
-
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
@@ -42,22 +41,22 @@
 					</span>
                 </div>
 
-                <form id="form1" runat="server" class="login100-form validate-form">
+                <form id="form1" runat="server" class="login100-form validate-form" method="post">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Username</span>
-                        <input id="txtUser" runat="server" class="input100" type="text" name="username" placeholder="Enter username">
+                        <input id="txtUser" runat="server" class="input100" type="text" name="username" placeholder="Enter username"/>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <span class="label-input100">Password</span>
-                        <input id="txtPass" runat="server" class="input100" type="password" name="pass" placeholder="Enter password">
+                        <input id="txtPass" runat="server" class="input100" type="password" name="pass" placeholder="Enter password"/>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="flex-sb-m w-full p-b-30">
                         <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"/>
                             <label class="label-checkbox100" for="ckb1">
 								Remember me
 							</label>

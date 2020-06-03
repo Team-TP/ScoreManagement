@@ -10,16 +10,20 @@ namespace ScoreM
     public partial class ProfileGV : System.Web.UI.Page
     {
         private ScoreManageDataContext db;
-        protected void Page_Load(object sender, EventArgs e,string userName)
+        protected void Page_Load(object sender, EventArgs e)
         {
+            string id = Session["id"].ToString();
+            string username = Session["username"].ToString();
+
             db = new ScoreManageDataContext();
             if (!IsPostBack)
             {
+
                 var query = from l in db.Lecturers
                             join s in db.Specializes on l.IdSpecialize equals s.ID
                             join m in db.Majors on s.IdMajors equals m.ID
                             join d in db.Departments on m.IDDepartment equals d.ID
-                            where l.ID == userName
+                            where l.ID == id
                             select new
                             {
                                 l.ID,
@@ -31,7 +35,7 @@ namespace ScoreM
                                 l.Email,
                                 s.SpecializeName,
                                 mName = m.Name,
-                                dName = d.Name,                 
+                                dName = d.Name,
                             };
                 txtMagv.Text = query.First().ID;
                 txtFname.Text = query.First().FirstName;
@@ -43,6 +47,7 @@ namespace ScoreM
                 txtChuyennganh.Text = query.First().SpecializeName;
                 txtNganh.Text = query.First().mName;
                 txtKhoa.Text = query.First().dName;
+                accName.Text = username;
             }
         }
     }

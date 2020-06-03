@@ -38,9 +38,9 @@ namespace ScoreM
                                select new { i.Username, j.FirstName, j.LastName };
                 if (myquery2.Any())
                 {
-                    string name = myquery2.First().FirstName + myquery2.First().LastName;
-                    string id = myquery2.First().Username;
-                    Response.Redirect("ProfileGV.aspx?userName=" + id);
+                    Session["id"] = myquery2.First().Username;
+                    Session["username"] = myquery2.First().FirstName + " " + myquery2.First().LastName;
+                    Response.Redirect("ProfileGV.aspx");
                 }
                 else
                 {
