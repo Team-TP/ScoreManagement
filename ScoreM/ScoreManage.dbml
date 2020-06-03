@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ScoreManagement" Class="ScoreManageDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAT-1706;Initial Catalog=ScoreManagement;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ScoreManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Accounts" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Permissions" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Term" Member="Terms">
+    <Type Name="Term">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Credit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Term_Enrollment" Member="Enrollments" ThisKey="ID" OtherKey="IDTerm" Type="Enrollment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdministrativesClasses" Member="AdministrativesClasses">
+    <Type Name="AdministrativesClass">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDMajor" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="AdministrativesClass_Student" Member="Students" ThisKey="ID" OtherKey="IdAdministrativeClass" Type="Student" />
+      <Association Name="Major_AdministrativesClass" Member="Major" ThisKey="IDMajor" OtherKey="ID" Type="Major" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Conduct" Member="Conducts">
+    <Type Name="Conduct">
+      <Column Name="IDSchoolTerm" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDStudent" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ScoreOfConduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Classification" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SchoolTerm_Conduct" Member="SchoolTerm" ThisKey="IDSchoolTerm" OtherKey="ID" Type="SchoolTerm" IsForeignKey="true" />
+      <Association Name="Student_Conduct" Member="Student" ThisKey="IDStudent" OtherKey="ID" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Departments" Member="Departments">
+    <Type Name="Department">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Department_Major" Member="Majors" ThisKey="ID" OtherKey="IDDepartment" Type="Major" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Detail.Enrollments]" Member="Detail_Enrollments">
+    <Type Name="Detail_Enrollment">
+      <Column Name="IDEnrollment" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClassSection" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Enrollment_Detail_Enrollment" Member="Enrollment" ThisKey="IDEnrollment" OtherKey="ID" Type="Enrollment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Enrollments" Member="Enrollments">
+    <Type Name="Enrollment">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDTerm" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IDLecturer" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdSchoolTerm" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Enrollment_Detail_Enrollment" Member="Detail_Enrollments" ThisKey="ID" OtherKey="IDEnrollment" Type="Detail_Enrollment" />
+      <Association Name="Enrollment_Score" Member="Scores" ThisKey="ID" OtherKey="IDEnrollment" Type="Score" />
+      <Association Name="Term_Enrollment" Member="Term" ThisKey="IDTerm" OtherKey="ID" Type="Term" IsForeignKey="true" />
+      <Association Name="Lecturer_Enrollment" Member="Lecturer" ThisKey="IDLecturer" OtherKey="ID" Type="Lecturer" IsForeignKey="true" />
+      <Association Name="SchoolTerm_Enrollment" Member="SchoolTerm" ThisKey="IdSchoolTerm" OtherKey="ID" Type="SchoolTerm" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lecturers" Member="Lecturers">
+    <Type Name="Lecturer">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Degree" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdSpecialize" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Lecturer_Enrollment" Member="Enrollments" ThisKey="ID" OtherKey="IDLecturer" Type="Enrollment" />
+      <Association Name="Specialize_Lecturer" Member="Specialize" ThisKey="IdSpecialize" OtherKey="ID" Type="Specialize" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Majors" Member="Majors">
+    <Type Name="Major">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDDepartment" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Major_AdministrativesClass" Member="AdministrativesClasses" ThisKey="ID" OtherKey="IDMajor" Type="AdministrativesClass" />
+      <Association Name="Major_Specialize" Member="Specializes" ThisKey="ID" OtherKey="IdMajors" Type="Specialize" />
+      <Association Name="Department_Major" Member="Department" ThisKey="IDDepartment" OtherKey="ID" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SchoolTerm" Member="SchoolTerms">
+    <Type Name="SchoolTerm">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Semester" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SchoolYear" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="SchoolTerm_Conduct" Member="Conducts" ThisKey="ID" OtherKey="IDSchoolTerm" Type="Conduct" />
+      <Association Name="SchoolTerm_Enrollment" Member="Enrollments" ThisKey="ID" OtherKey="IdSchoolTerm" Type="Enrollment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Scores" Member="Scores">
+    <Type Name="Score">
+      <Column Name="IDEnrollment" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDStudent" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastStudy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExamTimes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Scoreth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Evaluate" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Diligent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MidTerm" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pratice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Basic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Report" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Exam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Enrollment_Score" Member="Enrollment" ThisKey="IDEnrollment" OtherKey="ID" Type="Enrollment" IsForeignKey="true" />
+      <Association Name="Student_Score" Member="Student" ThisKey="IDStudent" OtherKey="ID" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Specialize" Member="Specializes">
+    <Type Name="Specialize">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SpecializeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdMajors" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Specialize_Lecturer" Member="Lecturers" ThisKey="ID" OtherKey="IdSpecialize" Type="Lecturer" />
+      <Association Name="Major_Specialize" Member="Major" ThisKey="IdMajors" OtherKey="ID" Type="Major" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="IdAdministrativeClass" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Student_Conduct" Member="Conducts" ThisKey="ID" OtherKey="IDStudent" Type="Conduct" />
+      <Association Name="Student_Score" Member="Scores" ThisKey="ID" OtherKey="IDStudent" Type="Score" />
+      <Association Name="AdministrativesClass_Student" Member="AdministrativesClass" ThisKey="IdAdministrativeClass" OtherKey="ID" Type="AdministrativesClass" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
