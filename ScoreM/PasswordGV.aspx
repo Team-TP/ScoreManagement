@@ -37,7 +37,7 @@
                         <p href="# ">Vinh University</p>
                     </li>
                     <li class="accname ">
-                        <p href="# ">Lê Anh Tú</p>
+                        <asp:Label ID="accName" runat="server" Text="Label"></asp:Label>
                     </li>
                     <li>
                         <img class="avatar " src="wwwroot/Picture/avatar.png " alt=" ">
