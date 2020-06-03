@@ -69,10 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.aspx" />
+    <Content Include="QLDiemGV.aspx" />
     <Content Include="PasswordGV.aspx" />
     <Content Include="ProfileGV.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
+    <Content Include="wwwroot\css\StyleDGv.css" />
     <Content Include="wwwroot\css\StylePwGv.css" />
     <Content Include="wwwroot\css\StyleProfGv.css" />
     <Content Include="wwwroot\Login\css\main.css" />
@@ -84,6 +86,7 @@
     <Content Include="wwwroot\Login\js\map-custom.js" />
     <Content Include="wwwroot\picture\avatar.png" />
     <Content Include="wwwroot\picture\logoVinh.png" />
+    <Content Include="wwwroot\picture\LOGO_text.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Login.aspx.cs">
@@ -92,6 +95,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QLDiemGV.aspx.cs">
+      <DependentUpon>QLDiemGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLDiemGV.aspx.designer.cs">
+      <DependentUpon>QLDiemGV.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordGV.aspx.cs">
       <DependentUpon>PasswordGV.aspx</DependentUpon>
