@@ -21,7 +21,7 @@
 .navbar-default {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 237px;
     width: 100%;
 }
 .navbar-nav .accname {
@@ -29,12 +29,14 @@
     position: absolute;
     font-size: 20px;
     top: 10px;
+    margin: 1px -58px 10px;
+    font-family:'Times New Roman';
 }
 
 .navbar-nav .avatar {
     height: 25px;
     width: 25px;
-    left: 1100px;
+    left: 1000px;
     position: absolute;
     font-size: 20px;
     top: 10px;
@@ -44,10 +46,19 @@
     padding: 0;
     background: none;
 }
+.logout {
+    position:absolute;
+    left:1250px;
+}
+#wrapper {
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
 /*header-end*/
 /*Menu*/
 .sidenav {
-    height: 78%;
+    height: 100%;
     width: 236px;
     position: fixed;
     z-index: 1;
@@ -70,13 +81,14 @@
         width: 250px;
         margin: 15px 0;
     }
-.sidenav a:nth-child(5) {
-    background: #474747;
-}
+        .sidenav a:nth-child(3) {
+            background: #3D5B6B;
+            color:aliceblue;
+        }
 
-.sidenav a:hover {
-    color: orange;
-}
+        .sidenav a:hover {
+            color: #3bc0c3;
+        }
 
 .sidenav .closebtn {
     font-size: 25px;
@@ -123,89 +135,61 @@
 }
 /*content-end*/
 /*footer*/
-footer {
-    margin-top: 15px;
-    font-family: roboto;
-    color: #bbbbbb;
-    background-color: #222;
-    font-size: 18px;
-    padding: 10px 10px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.footer .row {
     width: 100%;
+    background-color: #1a2942;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2000;
+    color: gainsboro;
+    padding-top: 15px;
 }
 
-.footer .col-md-9 .row {
-    width: 300px;
+.footer .col-md-2 i {
+    margin-left: 20px;
+    font-size: 25px;
+}
+.footer .col-md-2{
+    padding:0;
+}
+.footer .address {
+    width: 380px;
+    float: left;
+    margin-left: 250px;
+}
+
+.footer .phone {
+    width: 360px;
+    float: left;
+}
+.footer .email {
+    width: 360px;
     float: left;
 }
 
-footer h3 {
-    text-align: center;
-    margin: 10px 0 25px 0;
-    font-family: fantasy;
-}
 
-.col-md-9 {
-    padding: 0px 20px;
-    border-right: 2px solid white;
-}
 
-.col-md-10 {
-    text-align: left;
-}
 
-.connect {
-    padding: 0;
-    text-align: center;
-}
-
-.fas {
-    color: coral;
-}
 
 .fw {
-    font-size: 25px;
-    margin-right: 5px;
-    color: #04ceff;
+    font-size: 18px;
+    margin-right: 25px;
+    margin-left: -10px;
+    color: #667e8a;
+}
+.sidenav .fd{
+    color:aliceblue;
 }
 
-.fab {
-    margin: 0 20px;
-    font-size: 30px;
-}
 
-.fa-facebook {
-    color: #0089ff;
-}
 
-.fa-facebook-messenger {
-    color: #0089ff;
-}
 
-.fa-google-plus {
-    color: #ff4419;
-}
 
-.fa-twitter {
-    color: #1ecbff;
-}
 
-.fa-instagram {
-    color: #ff1bd8;
-}
 
-.copyright {
-    font-family: sans-serif;
-    background-color: black;
-    color: white;
-    height: 40px;
-    text-align: center;
-    font-size: 20px;
-}
 /*footer-end*/
-.login100-form-btn {
+/*.login100-form-btn {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -233,4 +217,4 @@ footer h3 {
 }
 input{
     padding-left:10px;
-}
+}*/
