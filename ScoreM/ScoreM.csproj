@@ -85,6 +85,7 @@
     <Content Include="wwwroot\Login\js\main.js" />
     <Content Include="wwwroot\Login\js\map-custom.js" />
     <Content Include="wwwroot\picture\avatar.png" />
+    <Content Include="wwwroot\picture\LOGO.jpg" />
     <Content Include="wwwroot\picture\logoVinh.png" />
     <Content Include="wwwroot\picture\LOGO_text.jpg" />
   </ItemGroup>
