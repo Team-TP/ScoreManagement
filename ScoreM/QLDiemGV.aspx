@@ -29,21 +29,13 @@
                     <a class="navbar-brand " href="# "><span class="openbtn " style="font-size: 30px; cursor: pointer">&#9776;</span></a>
 
                     <ul class="nav navbar-nav ">
-                        <%-- <li class="d-none d-lg-block">
-                    <form class="app-search">
-                        <div class="app-search-box">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <div class="input-group-append">
-                                    <button class="btn" type="submit">
-                                            <i class="fas fa-search"></i>
-                                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </li>--%>
-
+                        <button class="btn" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        <li class="search">
+                            <input type="text" placeholder="Search..." name="search">
+                           
+                        </li>
                         <li class="accname">
                             <asp:Label ID="accName" runat="server" Text="Label"></asp:Label>
                         </li>

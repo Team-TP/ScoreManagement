@@ -97,24 +97,25 @@
                     <tr>
                         <td class="auto-style1">Mật khẩu cũ</td>
                         <td >
-                            <asp:TextBox ID="txtPass" runat="server" Width="255px"> </asp:TextBox>
+                            <asp:TextBox ID="txtPass" runat="server" Width="255px" Class="form-control"> </asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1">Mật khẩu mới</td>
                         <td>
-                            <asp:TextBox ID="txtnewPass" runat="server" Width="255px"> </asp:TextBox>
+                            <asp:TextBox ID="txtnewPass" runat="server" Width="255px" Class="form-control"> </asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1">Nhập lại mật khẩu mới</td>
                         <td>
-                            <asp:TextBox ID="txtrePass" runat="server" Width="255px"> </asp:TextBox>
+                            <asp:TextBox ID="txtrePass" runat="server" Width="255px" Class="form-control"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1"></td>
                         <td>
+                            <br />
                             <asp:Button ID="btnChange" runat="server" class="login100-form-btn" Text="Đổi mật khẩu" OnClick="btnChange_Click"></asp:Button>
                         </td>
                     </tr>

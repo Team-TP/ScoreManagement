@@ -27,7 +27,7 @@
 }
 
 .navbar-nav .accname {
-    left: 1250px;
+    left: 1050px;
     position: absolute;
     font-size: 20px;
     top: 10px;
@@ -38,7 +38,7 @@
 .navbar-nav .avatar {
     height: 25px;
     width: 25px;
-    left: 800px;
+    left: 680px;
     position: absolute;
     font-size: 20px;
     top: 10px;
@@ -83,7 +83,7 @@
 
 .logout {
     position: absolute;
-    left: 1105px;
+    left: 900px;
 }
 
 #wrapper {
@@ -153,7 +153,7 @@
 /*content*/
 #content {
     padding-left: 300px;
-    width: 100%;
+    width: 80%;
     height: 550px;
     position: relative;
     top: 40px;
@@ -162,6 +162,8 @@
 
 .content {
     margin-top: 100px;
+    position: relative;
+    left: 280px;
 }
 
 #content table tr {
@@ -198,19 +200,27 @@
 }
 
 .footer .address {
-    width: 380px;
+    width: 360px;
     float: left;
     margin-left: 250px;
 }
 
 .footer .phone {
-    width: 360px;
+    width: 300px;
     float: left;
 }
 
+.footer .phone .col-md-11 {
+     width: 80%;
+}
+
 .footer .email {
-    width: 360px;
+    width: 320px;
     float: left;
+}
+
+.footer .email .col-md-11 {
+        width: 80%;
 }
 
 .fw {
@@ -231,7 +241,7 @@
 
 
 /*footer-end*/
-/*.login100-form-btn {
+.login100-form-btn {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -240,8 +250,8 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
+    min-width: 140px;
+    height: 40px;
     background-color: #57b846;
     border-radius: 25px;
     font-family: Poppins-Regular;
@@ -257,7 +267,7 @@
 .login100-form-btn:hover {
         background-color: #333333;
 }
-input{
+/*input{
     padding-left:10px;
 }*/
 

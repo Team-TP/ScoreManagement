@@ -24,8 +24,42 @@
     left: 237px;
     width: 100%;
 }
+.navbar-nav .search input {
+    /*border-radius: 20px;*/
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 2px solid #ccc;
+}
+
+    .navbar-nav .search input[type=text] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 3px;
+        margin-bottom: 8px;
+        resize: vertical;
+        display: flex;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 10px;
+        margin-top: 9px;
+        outline: none;
+        padding-right: 0;
+    }
+
+.navbar-nav .btn {
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 180px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 20px;
+}
 .navbar-nav .accname {
-    left: 950px;
+    left: 1050px;
     position: absolute;
     font-size: 20px;
     top: 10px;
@@ -36,7 +70,7 @@
 .navbar-nav .avatar {
     height: 25px;
     width: 25px;
-    left: 800px;
+    left: 680px;
     position: absolute;
     font-size: 20px;
     top: 10px;
@@ -48,7 +82,7 @@
 }
 .logout {
     position:absolute;
-    left:1000px;
+    left:900px;
 }
 #wrapper {
     height: 100%;
@@ -136,7 +170,7 @@
     font-size: 16px;
 }
 #content .gridview {
-    margin-top: 30px;
+    margin-top: 75px;
 }
 #content .textbox {
     width: 60%;

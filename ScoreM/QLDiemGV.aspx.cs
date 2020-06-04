@@ -15,15 +15,15 @@ namespace ScoreM
             if (!IsPostBack)
             {
                 db = new ScoreManageDataContext();
-                //string id = Session["id"].ToString();
-                //string username = Session["username"].ToString();
-                //accName.Text = "Cao thanh sơn";
+                string id = Session["id"].ToString();
+                string username = Session["username"].ToString();
+                accName.Text = username;
                 var query = from l in db.Lecturers
                             join en in db.Enrollments on l.ID equals en.IDLecturer
                             join sc in db.Scores on en.ID equals sc.IDEnrollment
                             join st in db.Students on sc.IDStudent equals st.ID
                             join t in db.Terms on en.IDTerm equals t.ID
-                            where l.ID == "LEC01"
+                            where l.ID == id
                             select new { t.ID, t.Name };
                 Dlist.DataSource = query.Distinct();
                 Dlist.DataValueField = "ID";
@@ -36,6 +36,8 @@ namespace ScoreM
 
         protected void Dlist_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string id = Session["id"].ToString();
+            string username = Session["username"].ToString();
             string IDT = Dlist.SelectedValue.ToString();
             db = new ScoreManageDataContext();
             var query = from l in db.Lecturers
@@ -43,7 +45,7 @@ namespace ScoreM
                         join sc in db.Scores on en.ID equals sc.IDEnrollment
                         join st in db.Students on sc.IDStudent equals st.ID
                         join t in db.Terms on en.IDTerm equals t.ID
-                        where l.ID == "LEC01" && t.ID == IDT
+                        where l.ID == id && t.ID == IDT
                         select new { st.FirstName, st.LastName, st.ID, sc.Diligent, sc.Pratice, sc.MidTerm, sc.Exam };
             GridView1.DataSource = query;
             GridView1.DataBind();
@@ -68,6 +70,8 @@ namespace ScoreM
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string id = Session["id"].ToString();
+            string username = Session["username"].ToString();
             db = new ScoreManageDataContext();
             string IDT = Dlist.SelectedValue.ToString();
             var query = from l in db.Lecturers
@@ -75,7 +79,7 @@ namespace ScoreM
                         join sc in db.Scores on en.ID equals sc.IDEnrollment
                         join st in db.Students on sc.IDStudent equals st.ID
                         join t in db.Terms on en.IDTerm equals t.ID
-                        where l.ID == "LEC01" && t.ID == IDT && st.ID == txtmasv.Text
+                        where l.ID == id && t.ID == IDT && st.ID == txtmasv.Text
                         select sc;
             Score myscore = query.FirstOrDefault();
             myscore.Diligent = Convert.ToDouble(txtcc.Text);
