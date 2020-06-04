@@ -69,11 +69,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.aspx" />
+    <Content Include="Sinhvien.aspx" />
     <Content Include="QLDiemGV.aspx" />
     <Content Include="PasswordGV.aspx" />
     <Content Include="ProfileGV.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config" />
+    <Content Include="wwwroot\css2\StyleDGv.css" />
+    <Content Include="wwwroot\css2\StyleProfGv.css" />
+    <Content Include="wwwroot\css2\StylePwSV.css" />
     <Content Include="wwwroot\css\StyleDGv.css" />
     <Content Include="wwwroot\css\StylePwGv.css" />
     <Content Include="wwwroot\css\StyleProfGv.css" />
@@ -96,6 +100,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sinhvien.aspx.cs">
+      <DependentUpon>Sinhvien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sinhvien.aspx.designer.cs">
+      <DependentUpon>Sinhvien.aspx</DependentUpon>
     </Compile>
     <Compile Include="QLDiemGV.aspx.cs">
       <DependentUpon>QLDiemGV.aspx</DependentUpon>
