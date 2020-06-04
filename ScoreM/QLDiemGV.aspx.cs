@@ -85,7 +85,6 @@ namespace ScoreM
             db.SubmitChanges();
             EditModal.Visible = false;
             Response.Redirect("QLDiemGV.aspx");
-
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
