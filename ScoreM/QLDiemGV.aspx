@@ -17,11 +17,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="wwwroot/Picture/logoVinh.png">
     <link rel=" stylesheet " href="wwwroot/css/StyleDGV.css ">
-    <style type="text/css">
-        .auto-style1 {
-            width: 389px
-        }
-    </style>
 
     <title>Quản lí điểm</title>
 </head>
@@ -31,7 +26,7 @@
 
             <div class="header">
                 <nav class="navbar navbar-default navbar-static-top " role="navigation ">
-                    <a class="navbar-brand " href="# "><span class="openbtn " style="font-size: 30px; cursor: pointer" onclick="openNav() ">&#9776;</span></a>
+                    <a class="navbar-brand " href="# "><span class="openbtn " style="font-size: 30px; cursor: pointer">&#9776;</span></a>
 
                     <ul class="nav navbar-nav ">
                         <%-- <li class="d-none d-lg-block">
@@ -49,9 +44,8 @@
                     </form>
                 </li>--%>
 
-                        <li class="accname ">
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
+                        <li class="accname">
+                            <asp:Label ID="accName" runat="server" Text="Label"></asp:Label>
                         </li>
                         <li>
                             <img class="avatar " src="wwwroot/Picture/avatar.png " alt=" ">
@@ -96,11 +90,90 @@
             </div>
         </div>
         <!-- content -->
-
+        <div id="content">
+            <p>Lớp học phần</p>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <asp:DropDownList ID="Dlist" runat="server" AutoPostBack="True" ControlStyle-CssClass="form-control" OnSelectedIndexChanged="Dlist_SelectedIndexChanged"></asp:DropDownList>
+                </div>             
+            </div>
+            <div class="gridview">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1033px" OnRowCommand="GridView1_RowCommand">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundField DataField="FirstName" HeaderText="Họ tên đệm" HtmlEncode="False">
+                            <HeaderStyle HorizontalAlign="Center" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="LastName" HeaderText="Tên" HtmlEncode="False" />
+                        <asp:BoundField DataField="Id" HeaderText="Mã sinh viên" HtmlEncode="False" />
+                        <asp:BoundField DataField="Diligent" HeaderText="Điểm chuyên cần" HtmlEncode="False" />
+                        <asp:BoundField DataField="MidTerm" HeaderText="Điểm GK" HtmlEncode="False" />
+                        <asp:BoundField DataField="Pratice" HeaderText="Điểm TH" HtmlEncode="False" />
+                        <asp:BoundField DataField="Exam" HeaderText="Điểm thi" HtmlEncode="False" />
+                        <asp:BoundField HeaderText="Tổng kết" HtmlEncode="False" />
+                        <asp:ButtonField ButtonType="Button" CommandName="btnSua" ControlStyle-CssClass="btn btn-warning" HeaderText="Sửa" Text="Sửa" />                
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+            </div>
+            <div id="EditModal" class="textbox" runat="server" visible="false">
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td><span>Họ tên đệm</span>&emsp;</td>
+                            <td><asp:TextBox ID="txtHodem" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td><span>Tên</span></td>
+                            <td><asp:TextBox ID="txtten" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td><span>Mã sinh viên</span></td>
+                            <td><asp:TextBox ID="txtmasv" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                    </table>   
+                    <br />
+                    <br />
+                    <asp:Button ID="btnSave" runat="server" class="btn btn-success" Text="Save" OnClick="btnSave_Click" />&emsp;&emsp;
+                    <asp:Button ID="btnCancel" Class="btn btn-warning" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <td><span>Điểm chuyên cần</span>&emsp;</td>
+                            <td><asp:TextBox ID="txtcc" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td><span>Điểm giữa kỳ</span></td>
+                            <td><asp:TextBox ID="txtgk" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td> <span>Điểm thực hành</span></td>
+                            <td><asp:TextBox ID="txtth" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td><span>Điểm thi</span></td>
+                            <td> <asp:TextBox ID="txtthi" runat="server" class="form-control"></asp:TextBox></td>
+                        </tr>
+                    </table>                  
+                </div>
+            </div>
+        </div>
+         
+        <!--footer-->
         <footer>
             <div class="container-fluid footer ">
                 <div class="row">
-                    <div class="col-md-10 ">       
+                    <div class="col-md-10 ">
                         <div class="address">
                             <div class="col-md-1"><i class="fas fa-map-marker "></i></div>
                             <div class="col-md-11">
