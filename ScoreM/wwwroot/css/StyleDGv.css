@@ -18,77 +18,38 @@
 .navbar-brand {
     padding: 15px 15px;
 }
-
 .navbar-default {
     position: fixed;
     top: 0;
     left: 237px;
     width: 100%;
 }
-
 .navbar-nav .accname {
-    left: 1250px;
+    left: 950px;
     position: absolute;
     font-size: 20px;
     top: 10px;
     margin: 1px -58px 10px;
-    font-family: 'Times New Roman';
+    font-family:'Times New Roman';
 }
 
 .navbar-nav .avatar {
     height: 25px;
     width: 25px;
-    left: 700px;
+    left: 800px;
     position: absolute;
     font-size: 20px;
     top: 10px;
-}
-
-.navbar-nav .search input {
-    /*border-radius: 20px;*/
-    height: 35px;
-    margin-top: 5px;
-    margin-left: 15px;
-    border: 2px solid #ccc;
-}
-
-    .navbar-nav .search input[type=text] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        box-sizing: border-box;
-        margin-top: 3px;
-        margin-bottom: 8px;
-        resize: vertical;
-        display: flex;
-        font-size: 16px;
-        font-family: 'Times New Roman', Times, serif;
-        padding-top: 10px;
-        margin-top: 9px;
-        outline: none;
-        padding-right: 0;
-    }
-
-.navbar-nav .btn {
-    background-color: white;
-    margin-top: 10px;
-    margin-left: 180px;
-    z-index: 1;
-    position: absolute;
-    border-radius: 20px;
 }
 
 .navbar-nav .active .alogo {
     padding: 0;
     background: none;
 }
-
 .logout {
-    position: absolute;
-    left: 1105px;
+    position:absolute;
+    left:1000px;
 }
-
 #wrapper {
     height: 100%;
     overflow: hidden;
@@ -120,64 +81,81 @@
         width: 250px;
         margin: 15px 0;
     }
-
         .sidenav a:nth-child(3) {
             background: #3D5B6B;
-            color: aliceblue;
+            color:aliceblue;
         }
 
         .sidenav a:hover {
             color: #3bc0c3;
         }
 
-    .sidenav .closebtn {
-        font-size: 25px;
-    }
+.sidenav .closebtn {
+    font-size: 25px;
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
-
-        .sidenav a {
-            font-size: 18px;
-        }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 .iconmenu {
     height: 40px;
     width: 40px;
 }
-
-.imglogo {
-    margin-top: -73px;
+.imglogo{
+    margin-top:-73px;
 }
 /*menu-end*/
 /*content*/
 #content {
     padding-left: 300px;
+    padding-top: 10px;
     width: 100%;
-    height: 550px;
+    height: 620px;
     position: relative;
-    top: 40px;
-    /*overflow: scroll;*/
+    top: 50px;
+    overflow: scroll;
+    background-color: whitesmoke;
 }
-
-.content {
+.content{
     margin-top: 100px;
+
 }
-
-#content table tr {
-    height: 40px;
+#content table tr{
+    height:40px;
 }
-
-    #content table tr td input {
-        box-shadow: 1px 1px 5px 0px gray;
-    }
-
-    #content table tr td {
-        font-size: 16px;
-    }
+#content table tr td input {
+    box-shadow: 1px 1px 5px 0px gray;
+}
+#content table tr td{
+    font-size: 16px;
+}
+#content .gridview {
+    margin-top: 30px;
+}
+#content .textbox {
+    width: 60%;
+    position: absolute;
+    top: 90px;
+    right: 200px;
+    font-weight: bold;
+    background-color: white;
+    height: 300px;
+    padding-top: 30px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 20px;
+}
+.textbox input{
+    margin-bottom:10px;
+}
+.textbox span{
+    color:dimgrey;
+}
 /*content-end*/
 /*footer*/
 .footer .row {
@@ -195,26 +173,35 @@
     margin-left: 20px;
     font-size: 25px;
 }
-
-.footer .col-md-2 {
-    padding: 0;
+.footer .col-md-2{
+    padding:0;
 }
-
 .footer .address {
-    width: 380px;
+    width: 360px;
     float: left;
     margin-left: 250px;
 }
 
 .footer .phone {
-    width: 360px;
+    width: 300px;
     float: left;
+}
+.footer .phone .col-md-11{
+    width:80%;
+}
+.footer .email {
+    width: 320px;
+    float: left;
+}
+.footer .email .col-md-11{
+    width: 80%;
+}
+.footer .col-md-10{
+padding:0;
 }
 
-.footer .email {
-    width: 360px;
-    float: left;
-}
+
+
 
 .fw {
     font-size: 18px;
@@ -222,9 +209,8 @@
     margin-left: -10px;
     color: #667e8a;
 }
-
-.sidenav .fd {
-    color: aliceblue;
+.sidenav .fd{
+    color:aliceblue;
 }
 
 
@@ -263,5 +249,3 @@
 input{
     padding-left:10px;
 }*/
-
-
