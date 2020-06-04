@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="QLDiemGV.aspx.cs" Inherits="ScoreM.QLDiemGV" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sinhvien.aspx.cs" Inherits="ScoreM.Sinhvien" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="wwwroot/Picture/logoVinh.png">
-    <link rel=" stylesheet " href="wwwroot/css/StyleDGV.css ">
+    <link rel=" stylesheet " href="wwwroot/css/StyleProfGv.css ">
     <style type="text/css">
         .auto-style1 {
             width: 389px
@@ -33,7 +33,7 @@
                 <nav class="navbar navbar-default navbar-static-top " role="navigation ">
                     <a class="navbar-brand " href="# "><span class="openbtn " style="font-size: 30px; cursor: pointer" onclick="openNav() ">&#9776;</span></a>
 
-                    <ul class="nav navbar-nav ">
+                    <ul class="nav navbar-nav "> 
                         <button class="btn" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -41,9 +41,9 @@
                             <input type="text" placeholder="Search..." name="search">
                            
                         </li>
-
+                        
                         <li class="accname ">
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="accname" runat="server" Text="Label"></asp:Label>
 
                         </li>
                         <li>
@@ -72,9 +72,9 @@
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
                     <a href="# "><i class="fas fa-users fw"></i>Lớp học phần</a>
-                    <a href="# "><i class="fas fa-edit fw fd"></i>Quản lý điểm</a>
-                    <a href="ProfileGV.aspx"><i class="fas fa-address-card fw"></i>Hồ sơ cá nhân</a>
-                    <a href="PasswordGV.aspx"><i class="fas fa-key fw"></i>Quản lý mật khẩu</a>
+                    <a href="# "><i class="fas fa-edit fw"></i>Quản lý điểm</a>
+                    <a href="Sinhvien.aspx"><i class="fas fa-address-card fw fd"></i>Hồ sơ cá nhân</a>
+                    <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu</a>
                 </div>
 
                 <script>
@@ -88,12 +88,14 @@
                 </script>
             </div>
         </div>
+    <!-- content -->
+       
         <!-- footer -->
 
         <footer>
             <div class="container-fluid footer ">
                 <div class="row">
-                    <div class="col-md-10 ">       
+                    <div class="col-md-10 ">
                         <div class="address">
                             <div class="col-md-1"><i class="fas fa-map-marker "></i></div>
                             <div class="col-md-11">

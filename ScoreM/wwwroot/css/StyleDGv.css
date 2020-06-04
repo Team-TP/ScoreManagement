@@ -18,38 +18,77 @@
 .navbar-brand {
     padding: 15px 15px;
 }
+
 .navbar-default {
     position: fixed;
     top: 0;
     left: 237px;
     width: 100%;
 }
+
 .navbar-nav .accname {
     left: 1250px;
     position: absolute;
     font-size: 20px;
     top: 10px;
     margin: 1px -58px 10px;
-    font-family:'Times New Roman';
+    font-family: 'Times New Roman';
 }
 
 .navbar-nav .avatar {
     height: 25px;
     width: 25px;
-    left: 1000px;
+    left: 700px;
     position: absolute;
     font-size: 20px;
     top: 10px;
+}
+
+.navbar-nav .search input {
+    /*border-radius: 20px;*/
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 2px solid #ccc;
+}
+
+    .navbar-nav .search input[type=text] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 3px;
+        margin-bottom: 8px;
+        resize: vertical;
+        display: flex;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 10px;
+        margin-top: 9px;
+        outline: none;
+        padding-right: 0;
+    }
+
+.navbar-nav .btn {
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 180px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 20px;
 }
 
 .navbar-nav .active .alogo {
     padding: 0;
     background: none;
 }
+
 .logout {
-    position:absolute;
-    left:1250px;
+    position: absolute;
+    left: 1105px;
 }
+
 #wrapper {
     height: 100%;
     overflow: hidden;
@@ -81,34 +120,37 @@
         width: 250px;
         margin: 15px 0;
     }
+
         .sidenav a:nth-child(3) {
             background: #3D5B6B;
-            color:aliceblue;
+            color: aliceblue;
         }
 
         .sidenav a:hover {
             color: #3bc0c3;
         }
 
-.sidenav .closebtn {
-    font-size: 25px;
-}
+    .sidenav .closebtn {
+        font-size: 25px;
+    }
 
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
-    .sidenav a {
-        font-size: 18px;
-    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
 }
 
 .iconmenu {
     height: 40px;
     width: 40px;
 }
-.imglogo{
-    margin-top:-73px;
+
+.imglogo {
+    margin-top: -73px;
 }
 /*menu-end*/
 /*content*/
@@ -118,21 +160,24 @@
     height: 550px;
     position: relative;
     top: 40px;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
-.content{
-    margin-top: 100px;
 
+.content {
+    margin-top: 100px;
 }
-#content table tr{
-    height:40px;
+
+#content table tr {
+    height: 40px;
 }
-#content table tr td input {
-    box-shadow: 1px 1px 5px 0px gray;
-}
-#content table tr td{
-    font-size: 16px;
-}
+
+    #content table tr td input {
+        box-shadow: 1px 1px 5px 0px gray;
+    }
+
+    #content table tr td {
+        font-size: 16px;
+    }
 /*content-end*/
 /*footer*/
 .footer .row {
@@ -150,9 +195,11 @@
     margin-left: 20px;
     font-size: 25px;
 }
-.footer .col-md-2{
-    padding:0;
+
+.footer .col-md-2 {
+    padding: 0;
 }
+
 .footer .address {
     width: 380px;
     float: left;
@@ -163,14 +210,11 @@
     width: 360px;
     float: left;
 }
+
 .footer .email {
     width: 360px;
     float: left;
 }
-
-
-
-
 
 .fw {
     font-size: 18px;
@@ -178,8 +222,9 @@
     margin-left: -10px;
     color: #667e8a;
 }
-.sidenav .fd{
-    color:aliceblue;
+
+.sidenav .fd {
+    color: aliceblue;
 }
 
 
@@ -218,3 +263,5 @@
 input{
     padding-left:10px;
 }*/
+
+
