@@ -75,7 +75,7 @@
     <Content Include="PasswordGV.aspx" />
     <Content Include="ProfileGV.aspx" />
     <Content Include="SVDiemTonghop.aspx" />
-    <Content Include="SVInfor.aspx" />
+    <Content Include="SVHome.aspx" />
     <Content Include="SVProf.aspx" />
     <Content Include="Web.config" />
     <Content Include="wwwroot\css2\StyleHosoSV.css" />
@@ -155,12 +155,12 @@
     <Compile Include="SVDiemTonghop.aspx.designer.cs">
       <DependentUpon>SVDiemTonghop.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SVInfor.aspx.cs">
-      <DependentUpon>SVInfor.aspx</DependentUpon>
+    <Compile Include="SVHome.aspx.cs">
+      <DependentUpon>SVHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SVInfor.aspx.designer.cs">
-      <DependentUpon>SVInfor.aspx</DependentUpon>
+    <Compile Include="SVHome.aspx.designer.cs">
+      <DependentUpon>SVHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="SVProf.aspx.cs">
       <DependentUpon>SVProf.aspx</DependentUpon>

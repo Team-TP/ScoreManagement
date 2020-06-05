@@ -11,7 +11,7 @@ namespace ScoreM
 {
 
 
-    public partial class SVInfor
+    public partial class SVHome
     {
 
         /// <summary>

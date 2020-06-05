@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SVInfor.aspx.cs" Inherits="ScoreM.SVInfor" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SVHome.aspx.cs" Inherits="ScoreM.SVHome" %>
 
 
 <!DOCTYPE html>

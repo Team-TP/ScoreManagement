@@ -28,7 +28,7 @@ namespace ScoreM
             {
                 string name = myquery.First().FirstName + myquery.First().LastName;
                 
-                Response.Redirect("Sinhvien.aspx");
+                Response.Redirect("SVHome.aspx");
             }
             else
             {
