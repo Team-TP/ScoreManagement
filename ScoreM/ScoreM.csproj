@@ -70,7 +70,6 @@
   <ItemGroup>
     <Content Include="Login.aspx" />
     <Content Include="LopHocPhanGV.aspx" />
-    <Content Include="Sinhvien.aspx" />
     <Content Include="QLDiemGV.aspx" />
     <Content Include="PasswordGV.aspx" />
     <Content Include="ProfileGV.aspx" />
@@ -111,13 +110,6 @@
     </Compile>
     <Compile Include="LopHocPhanGV.aspx.designer.cs">
       <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Sinhvien.aspx.cs">
-      <DependentUpon>Sinhvien.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Sinhvien.aspx.designer.cs">
-      <DependentUpon>Sinhvien.aspx</DependentUpon>
     </Compile>
     <Compile Include="QLDiemGV.aspx.cs">
       <DependentUpon>QLDiemGV.aspx</DependentUpon>
