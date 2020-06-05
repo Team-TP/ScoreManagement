@@ -74,7 +74,7 @@
                     <a href="# "><i class="fas fa-users fw"></i>Đăng kí học<i class="fas fa-angle-right ed"></i></a>
                     <a href="SVDiemTonghop.aspx"><i class="fas fa-seedling fw"></i>Tra cứu điểm tổng hợp</a>
                     <a href="SVProf.aspx"> <i class="fas fa-address-card fw "></i>Thông tin cá nhân<i class="fas fa-angle-right ed"></i></a>
-                    <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
+                    <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
 
                 </div>
 

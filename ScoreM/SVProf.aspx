@@ -79,7 +79,7 @@
                             <a href="SinhvienHoso.aspx">Thông tin hồ sơ sinh viên</a>
                         </a>
 
-                    <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
+                    <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
 
                 </div>
 

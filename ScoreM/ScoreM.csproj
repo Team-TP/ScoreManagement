@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.aspx" />
+    <Content Include="LopHocPhanGV.aspx" />
+    <Content Include="PasswordSV.aspx" />
     <Content Include="SinhvienHoso.aspx" />
     <Content Include="SinhvienRenluyen.aspx" />
     <Content Include="QLDiemGV.aspx" />
@@ -80,10 +82,12 @@
     <Content Include="Web.config" />
     <Content Include="wwwroot\css2\StyleHosoSV.css" />
     <Content Include="wwwroot\css2\StyleDiemRL.css" />
+    <Content Include="wwwroot\css2\StylePwSV.css" />
     <Content Include="wwwroot\css2\StyleSVDiemTH.css" />
     <Content Include="wwwroot\css2\StyleSV.css" />
     <Content Include="wwwroot\css2\StyleProfSV.css" />
     <Content Include="wwwroot\css\StyleDGv.css" />
+    <Content Include="wwwroot\css\StyleLHPGV.css" />
     <Content Include="wwwroot\css\StylePwGv.css" />
     <Content Include="wwwroot\css\StyleProfGv.css" />
     <Content Include="wwwroot\Login\css\main.css" />
@@ -106,6 +110,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LopHocPhanGV.aspx.cs">
+      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LopHocPhanGV.aspx.designer.cs">
+      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordSV.aspx.cs">
+      <DependentUpon>PasswordSV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordSV.aspx.designer.cs">
+      <DependentUpon>PasswordSV.aspx</DependentUpon>
     </Compile>
     <Compile Include="SinhvienHoso.aspx.cs">
       <DependentUpon>SinhvienHoso.aspx</DependentUpon>

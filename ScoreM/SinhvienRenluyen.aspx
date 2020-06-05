@@ -75,11 +75,11 @@
                        <a> <i class="fas fa-address-card fw fd"></i>Thông tin cá nhân<i class="fas fa-angle-down ed"></i>
                             <a href="#">Xem điểm theo lớp<br /> và môn học</a>
                             <a href="#">Tra cứu điểm<i class="fas fa-angle-right ed"></i></a>
-                            <a href="#">Tra cứu điểm rèn luyện</a>
-                            <a href="#">Thông tin hồ sơ sinh viên</a>
+                            <a href="SinhvienRenluyen.aspx">Tra cứu điểm rèn luyện</a>
+                            <a href="SinhvienHoso.aspx">Thông tin hồ sơ sinh viên</a>
                         </a>
 
-                    <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
+                    <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
 
                 </div>
 

@@ -26,8 +26,8 @@ namespace ScoreM
                           select new { i.Username, j.FirstName, j.LastName };
             if (myquery.Any())
             {
-                string name = myquery.First().FirstName + myquery.First().LastName;
-                
+                Session["id"] = myquery.First().Username;
+                Session["username"] = myquery.First().FirstName + " " + myquery.First().LastName;
                 Response.Redirect("SVHome.aspx");
             }
             else

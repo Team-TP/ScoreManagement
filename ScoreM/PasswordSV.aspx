@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SVDiemTonghop.aspx.cs" Inherits="ScoreM.SVDiemTonghop" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PasswordSV.aspx.cs" Inherits="ScoreM.PasswordSV" %>
 
 <!DOCTYPE html>
 
@@ -17,14 +16,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="wwwroot/Picture/logoVinh.png">
-    <link rel=" stylesheet " href="wwwroot/css2/StyleSVDiemTH.css ">
+    <link rel=" stylesheet " href="wwwroot/css2/StylePwSV.css ">
     <style type="text/css">
         .auto-style1 {
             width: 389px
         }
     </style>
 
-    <title>Thông tin sinh viên</title>
+    <title>Quản lí mật khẩu</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,14 +33,15 @@
                 <nav class="navbar navbar-default navbar-static-top " role="navigation ">
                     <a class="navbar-brand " href="# "><span class="openbtn " style="font-size: 30px; cursor: pointer" onclick="openNav() ">&#9776;</span></a>
 
-                    <ul class="nav navbar-nav ">
+                    <ul class="nav navbar-nav "> 
                         <button class="btn" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
+                                <i class="fas fa-search"></i>
+                            </button>
                         <li class="search">
                             <input type="text" placeholder="Search..." name="search">
+                           
                         </li>
-
+                        
                         <li class="accname ">
                             <asp:Label ID="accname" runat="server" Text="Label"></asp:Label>
 
@@ -72,10 +72,9 @@
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
                     <a href="# "><i class="fas fa-users fw"></i>Đăng kí học<i class="fas fa-angle-right ed"></i></a>
-                    <a href="SVDiemTonghop.aspx"><i class="fas fa-seedling fw fd"></i>Tra cứu điểm tổng hợp</a>
+                    <a href="SVDiemTonghop.aspx"><i class="fas fa-seedling fw"></i>Tra cứu điểm tổng hợp</a>
                     <a href="SVProf.aspx"> <i class="fas fa-address-card fw "></i>Thông tin cá nhân<i class="fas fa-angle-right ed"></i></a>
-                    <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
-
+                    <a href="PasswordSV.aspx"><i class="fas fa-key fw fd"></i>Quản lý mật khẩu </a>
                 </div>
 
                 <script>
@@ -90,6 +89,39 @@
             </div>
         </div>
         <!-- content -->
+        <div id="content">
+            <div class="content">
+                <h1>Đổi mật khẩu</h1>
+                <table style="width: 60%;">
+
+                    <tr>
+                        <td class="auto-style1">Mật khẩu cũ</td>
+                        <td >
+                            <asp:TextBox ID="txtPass" runat="server" Width="255px" Class="form-control"> </asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Mật khẩu mới</td>
+                        <td>
+                            <asp:TextBox ID="txtnewPass" runat="server" Width="255px" Class="form-control"> </asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Nhập lại mật khẩu mới</td>
+                        <td>
+                            <asp:TextBox ID="txtrePass" runat="server" Width="255px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1"></td>
+                        <td>
+                            <br />
+                            <asp:Button ID="btnChange" runat="server" class="login100-form-btn" Text="Đổi mật khẩu" OnClick="btnChange_Click"></asp:Button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <!-- footer -->
 
         <footer>
@@ -128,4 +160,3 @@
     </form>
 </body>
 </html>
-

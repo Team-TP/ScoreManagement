@@ -11,7 +11,8 @@ namespace ScoreM
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string username = Session["username"].ToString();
+            accname.Text = username;
         }
     }
 }

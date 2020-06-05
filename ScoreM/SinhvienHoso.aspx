@@ -71,19 +71,19 @@
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
                     <a href="# "><i class="fas fa-users fw"></i>Đăng kí học<i class="fas fa-angle-right ed"></i></a>
-                    <a href="# "><i class="fas fa-seedling fw"></i>Tra cứu điểm tổng hợp</a>
+                    <a href="SVDiemTongHop.aspx"><i class="fas fa-seedling fw"></i>Tra cứu điểm tổng hợp</a>
                      <%-- <div class="dropdown">--%>
                        <a> <i class="fas fa-address-card fw fd"></i>Thông tin cá nhân<i class="fas fa-angle-down ed"></i>
 <%--                      <div class="dropdown-content">--%>
                             <a href="#">Xem điểm theo lớp<br /> và môn học</a>
                             <a href="#">Tra cứu điểm<i class="fas fa-angle-right ed"></i></a>
-                            <a href="#">Tra cứu điểm rèn luyện</a>
-                            <a href="#">Thông tin hồ sơ sinh viên</a>
+                            <a href="SinhvienRenluyen.aspx">Tra cứu điểm rèn luyện</a>
+                            <a href="SinhvienHoso.aspx">Thông tin hồ sơ sinh viên</a>
 <%--                        </div>--%>
                         </a>
 
                 <%--    </div>--%>
-                    <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
+                    <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
 
                 </div>
 
