@@ -46,9 +46,11 @@ namespace ScoreM
                         join st in db.Students on sc.IDStudent equals st.ID
                         join t in db.Terms on en.IDTerm equals t.ID
                         where l.ID == id && t.ID == IDT
-                        select new { st.FirstName, st.LastName, st.ID, sc.Diligent, sc.Pratice, sc.MidTerm, sc.Exam };
+                        select new { st.FirstName, st.LastName, st.ID, sc.Diligent, sc.Pratice, sc.MidTerm, sc.Exam, 
+                          Tongket = (((double)sc.Diligent*0.1 + (double)sc.MidTerm*0.2 + ((double)sc.Exam*45+ (double)sc.Pratice*15))/60).ToString().Substring(0,4) };
             GridView1.DataSource = query;
             GridView1.DataBind();
+
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -57,13 +59,14 @@ namespace ScoreM
             if (e.CommandName == "btnSua")
             {
                 EditModal.Visible = true;
-                txtHodem.Text = GridView1.Rows[row].Cells[0].Text;
-                txtten.Text = GridView1.Rows[row].Cells[1].Text;
-                txtmasv.Text = GridView1.Rows[row].Cells[2].Text;
-                txtcc.Text = GridView1.Rows[row].Cells[3].Text;
-                txtgk.Text = GridView1.Rows[row].Cells[4].Text;
-                txtth.Text = GridView1.Rows[row].Cells[5].Text;
-                txtthi.Text = GridView1.Rows[row].Cells[6].Text;
+                txtHodem.Text = GridView1.Rows[row].Cells[1].Text;
+                txtten.Text = GridView1.Rows[row].Cells[2].Text;
+                txtmasv.Text = GridView1.Rows[row].Cells[3].Text;
+                txtcc.Text = GridView1.Rows[row].Cells[4].Text;
+                txtgk.Text = GridView1.Rows[row].Cells[5].Text;
+                txtth.Text = GridView1.Rows[row].Cells[6].Text;
+                txtthi.Text = GridView1.Rows[row].Cells[7].Text;
+
                 
             }
         }

@@ -71,8 +71,8 @@
                 <div id="mySidenav" class="sidenav">
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
-                    <a href="# "><i class="fas fa-users fw"></i>Lớp học phần</a>
-                    <a href="# "><i class="fas fa-edit fw"></i>Quản lý điểm</a>
+                    <a href="LopHocPhanGV.aspx"><i class="fas fa-users fw"></i>Lớp học phần</a>
+                    <a href="QLDiemGV.aspx"><i class="fas fa-edit fw"></i>Quản lý điểm</a>
                     <a href="ProfileGV.aspx"><i class="fas fa-address-card fw"></i>Hồ sơ cá nhân</a>
                     <a href="PasswordGV.aspx"><i class="fas fa-key fw fd"></i>Quản lý mật khẩu</a>
                 </div>

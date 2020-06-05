@@ -71,7 +71,7 @@
                 <div id="mySidenav" class="sidenav">
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
-                    <a href="# "><i class="fas fa-users fw"></i>Lớp học phần</a>
+                    <a href="LopHocPhanGV.aspx"><i class="fas fa-users fw"></i>Lớp học phần</a>
                     <a href="QLDiemGV.aspx "><i class="fas fa-edit fw"></i>Quản lý điểm</a>
                     <a href="ProfileGV.aspx"><i class="fas fa-address-card fw fd"></i>Hồ sơ cá nhân</a>
                     <a href="PasswordGV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu</a>
@@ -97,7 +97,7 @@
                     <tr>
                         <td class="auto-style1">Mã giảng viên</td>
                         <td>
-                            <asp:TextBox ID="txtMagv" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtMagv" runat="server" Width="400px" Class="form-control" BackColor="#CCCCCC" Enabled="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -139,26 +139,26 @@
                     <tr>
                         <td class="auto-style1">Chuyên ngành</td>
                         <td>
-                            <asp:TextBox ID="txtChuyennganh" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtChuyennganh" runat="server" Width="400px" Class="form-control" BackColor="#CCCCCC" Enabled="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1">Ngành</td>
                         <td>
-                            <asp:TextBox ID="txtNganh" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtNganh" runat="server" Width="400px" Class="form-control" BackColor="#CCCCCC" Enabled="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1">Khoa</td>
                         <td>
-                            <asp:TextBox ID="txtKhoa" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtKhoa" runat="server" Width="400px" Class="form-control" BackColor="#CCCCCC" Enabled="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style1"></td>
                         <td>
                             <br />
-                            <asp:Button ID="btnCapnhat" runat="server" class="login100-form-btn" Text="Cập nhật"></asp:Button>
+                            <asp:Button ID="btnCapnhat" runat="server" class="login100-form-btn" Text="Cập nhật" OnClick="btnCapnhat_Click"></asp:Button>
                         </td>
                     </tr>
                 </table>

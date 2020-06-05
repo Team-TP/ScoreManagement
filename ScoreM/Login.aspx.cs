@@ -40,7 +40,7 @@ namespace ScoreM
                 {
                     Session["id"] = myquery2.First().Username;
                     Session["username"] = myquery2.First().FirstName + " " + myquery2.First().LastName;
-                    Response.Redirect("ProfileGV.aspx");
+                    Response.Redirect("LopHocPhanGV.aspx");
                 }
                 else
                 {

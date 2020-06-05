@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.aspx" />
+    <Content Include="LopHocPhanGV.aspx" />
     <Content Include="Sinhvien.aspx" />
     <Content Include="QLDiemGV.aspx" />
     <Content Include="PasswordGV.aspx" />
@@ -78,6 +79,7 @@
     <Content Include="wwwroot\css2\StyleDGv.css" />
     <Content Include="wwwroot\css2\StyleProfGv.css" />
     <Content Include="wwwroot\css2\StylePwSV.css" />
+    <Content Include="wwwroot\css\StyleLHPGV.css" />
     <Content Include="wwwroot\css\StyleDGv.css" />
     <Content Include="wwwroot\css\StylePwGv.css" />
     <Content Include="wwwroot\css\StyleProfGv.css" />
@@ -88,10 +90,12 @@
     <Content Include="wwwroot\Login\images\map-marker.png" />
     <Content Include="wwwroot\Login\js\main.js" />
     <Content Include="wwwroot\Login\js\map-custom.js" />
+    <Content Include="wwwroot\picture\2 way arrow.png" />
     <Content Include="wwwroot\picture\avatar.png" />
     <Content Include="wwwroot\picture\LOGO.jpg" />
     <Content Include="wwwroot\picture\logoVinh.png" />
     <Content Include="wwwroot\picture\LOGO_text.jpg" />
+    <Content Include="wwwroot\picture\trash-512.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Login.aspx.cs">
@@ -100,6 +104,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LopHocPhanGV.aspx.cs">
+      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LopHocPhanGV.aspx.designer.cs">
+      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sinhvien.aspx.cs">
       <DependentUpon>Sinhvien.aspx</DependentUpon>

@@ -64,8 +64,8 @@
                 <div id="mySidenav" class="sidenav">
 
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
-                    <a href="# "><i class="fas fa-users fw"></i>Lớp học phần</a>
-                    <a href="# "><i class="fas fa-edit fw fd"></i>Quản lý điểm</a>
+                    <a href="LopHocPhanGV.aspx"><i class="fas fa-users fw"></i>Lớp học phần</a>
+                    <a href="QLDiemGV.aspx"><i class="fas fa-edit fw fd"></i>Quản lý điểm</a>
                     <a href="ProfileGV.aspx"><i class="fas fa-address-card fw"></i>Hồ sơ cá nhân</a>
                     <a href="PasswordGV.aspx"><i class="fas fa-key fw"></i>Quản lý mật khẩu</a>
                 </div>
@@ -85,7 +85,7 @@
         <div id="content">
             <p>Lớp học phần</p>
             <div class="col-md-12">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <asp:DropDownList ID="Dlist" runat="server" AutoPostBack="True" ControlStyle-CssClass="form-control" OnSelectedIndexChanged="Dlist_SelectedIndexChanged"></asp:DropDownList>
                 </div>             
             </div>
@@ -93,6 +93,13 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1033px" OnRowCommand="GridView1_RowCommand">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
+                        <asp:TemplateField HeaderText="STT">
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemTemplate>
+                            <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:TemplateField>
                         <asp:BoundField DataField="FirstName" HeaderText="Họ tên đệm" HtmlEncode="False">
                             <HeaderStyle HorizontalAlign="Center" />
                         </asp:BoundField>
@@ -102,8 +109,11 @@
                         <asp:BoundField DataField="MidTerm" HeaderText="Điểm GK" HtmlEncode="False" />
                         <asp:BoundField DataField="Pratice" HeaderText="Điểm TH" HtmlEncode="False" />
                         <asp:BoundField DataField="Exam" HeaderText="Điểm thi" HtmlEncode="False" />
-                        <asp:BoundField HeaderText="Tổng kết" HtmlEncode="False" />
-                        <asp:ButtonField ButtonType="Button" CommandName="btnSua" ControlStyle-CssClass="btn btn-warning" HeaderText="Sửa" Text="Sửa" />                
+                        <asp:BoundField HeaderText="Tổng kết" HtmlEncode="False" DataField="Tongket" />
+                        <asp:ButtonField ButtonType="Button" CommandName="btnSua" ControlStyle-CssClass="btn btn-warning" HeaderText="Sửa" Text="Sửa" >                
+                                                    <ControlStyle CssClass="btn btn-warning"></ControlStyle>
+                        </asp:ButtonField>
+                        <asp:TemplateField></asp:TemplateField>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
