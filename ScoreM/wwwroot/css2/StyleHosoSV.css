@@ -1,0 +1,340 @@
+
+/*Header*/
+.logo {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 28px;
+    margin-left: 19px;
+    margin-top: -44px;
+}
+
+.active p {
+    font-size: 15px;
+    margin-top: -5px;
+    color: whitesmoke;
+}
+
+.navbar-brand {
+    padding: 15px 15px;
+}
+
+.navbar-default {
+    position: fixed;
+    top: 0;
+    left: 237px;
+    width: 100%;
+}
+
+.navbar-nav .search input {
+    /*border-radius: 20px;*/
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 15px;
+    border: 2px solid #ccc;
+}
+
+    .navbar-nav .search input[type=text] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 3px;
+        margin-bottom: 8px;
+        resize: vertical;
+        display: flex;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 10px;
+        margin-top: 9px;
+        outline: none;
+        padding-right: 0;
+    }
+
+.navbar-nav .btn {
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 180px;
+    z-index: 1;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.navbar-nav .accname {
+    left: 1050px;
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+    margin: 1px -58px 10px;
+    font-family: 'Times New Roman';
+}
+
+.navbar-nav .avatar {
+    height: 25px;
+    width: 25px;
+    left: 680px;
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+}
+
+.navbar-nav .active .alogo {
+    padding: 0;
+    background: none;
+}
+
+.logout {
+    position: absolute;
+    left: 900px;
+}
+
+#wrapper {
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
+/*header-end*/
+/*Menu*/
+.sidenav {
+    height: 100%;
+    width: 236px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1a2942;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #667e8a;
+        display: block;
+        transition: 0.3s;
+        float: left;
+        width: 250px;
+        margin: 15px 0;
+    }
+
+        .sidenav a:nth-child(8) {
+            background: #3D5B6B;
+            color: aliceblue;
+        }
+
+        .sidenav a:hover {
+            color: #3bc0c3;
+        }
+
+    .sidenav .closebtn {
+        font-size: 25px;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+.iconmenu {
+    height: 40px;
+    width: 40px;
+}
+
+.imglogo {
+    margin-top: -73px;
+}
+/*menu-end*/
+/*content*/
+#content {
+    padding-left: 300px;
+    padding-top: 10px;
+    width: 100%;
+    height: 620px;
+    position: relative;
+    top: 50px;
+    overflow: scroll;
+    background-color: whitesmoke;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+#content table tr {
+    height: 40px;
+}
+
+    #content table tr td input {
+        box-shadow: 1px 1px 5px 0px gray;
+    }
+
+    #content table tr td {
+        font-size: 16px;
+    }
+
+#content .gridview {
+    margin-top: 75px;
+}
+
+#content .textbox {
+    width: 60%;
+    position: absolute;
+    top: 90px;
+    right: 200px;
+    font-weight: bold;
+    background-color: white;
+    height: 300px;
+    padding-top: 30px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 20px;
+}
+
+.textbox input {
+    margin-bottom: 10px;
+}
+
+.textbox span {
+    color: dimgrey;
+}
+/*content-end*/
+/*footer*/
+.footer .row {
+    width: 100%;
+    background-color: #1a2942;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2000;
+    color: gainsboro;
+    padding-top: 15px;
+}
+
+.footer .col-md-2 i {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.footer .col-md-2 {
+    padding: 0;
+}
+
+.footer .address {
+    width: 360px;
+    float: left;
+    margin-left: 250px;
+}
+
+.footer .phone {
+    width: 300px;
+    float: left;
+}
+
+    .footer .phone .col-md-11 {
+        width: 80%;
+    }
+
+.footer .email {
+    width: 320px;
+    float: left;
+}
+
+    .footer .email .col-md-11 {
+        width: 80%;
+    }
+
+.footer .col-md-10 {
+    padding: 0;
+}
+
+
+
+
+.fw {
+    font-size: 18px;
+    margin-right: 25px;
+    margin-left: -10px;
+    color: #667e8a;
+}
+
+.sidenav .ed {
+    padding-left: 20px;
+}
+
+
+.sidenav .fd {
+    color: aliceblue;
+
+}
+/*.sidenav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sidenav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+sidenav .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav .dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.sidenav .dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+
+
+
+
+
+/*footer-end*/
+/*.login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #57b846;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+        background-color: #333333;
+}
+input{
+    padding-left:10px;
+}*/
