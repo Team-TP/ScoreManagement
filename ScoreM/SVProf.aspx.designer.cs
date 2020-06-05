@@ -11,7 +11,7 @@ namespace ScoreM
 {
 
 
-    public partial class test
+    public partial class SVProf
     {
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace ScoreM
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// GridView1 control.
+        /// accname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label accname;
     }
 }

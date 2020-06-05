@@ -69,16 +69,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.aspx" />
-    <Content Include="LopHocPhanGV.aspx" />
+    <Content Include="SinhvienHoso.aspx" />
+    <Content Include="SinhvienRenluyen.aspx" />
     <Content Include="QLDiemGV.aspx" />
     <Content Include="PasswordGV.aspx" />
     <Content Include="ProfileGV.aspx" />
-    <Content Include="test.aspx" />
+    <Content Include="SVDiemTonghop.aspx" />
+    <Content Include="SVHome.aspx" />
+    <Content Include="SVProf.aspx" />
     <Content Include="Web.config" />
-    <Content Include="wwwroot\css2\StyleDGv.css" />
-    <Content Include="wwwroot\css2\StyleProfGv.css" />
-    <Content Include="wwwroot\css2\StylePwSV.css" />
-    <Content Include="wwwroot\css\StyleLHPGV.css" />
+    <Content Include="wwwroot\css2\StyleHosoSV.css" />
+    <Content Include="wwwroot\css2\StyleDiemRL.css" />
+    <Content Include="wwwroot\css2\StyleSVDiemTH.css" />
+    <Content Include="wwwroot\css2\StyleSV.css" />
+    <Content Include="wwwroot\css2\StyleProfSV.css" />
     <Content Include="wwwroot\css\StyleDGv.css" />
     <Content Include="wwwroot\css\StylePwGv.css" />
     <Content Include="wwwroot\css\StyleProfGv.css" />
@@ -89,12 +93,11 @@
     <Content Include="wwwroot\Login\images\map-marker.png" />
     <Content Include="wwwroot\Login\js\main.js" />
     <Content Include="wwwroot\Login\js\map-custom.js" />
-    <Content Include="wwwroot\picture\2 way arrow.png" />
     <Content Include="wwwroot\picture\avatar.png" />
     <Content Include="wwwroot\picture\LOGO.jpg" />
     <Content Include="wwwroot\picture\logoVinh.png" />
     <Content Include="wwwroot\picture\LOGO_text.jpg" />
-    <Content Include="wwwroot\picture\trash-512.png" />
+    <Content Include="wwwroot\picture\picNen.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Login.aspx.cs">
@@ -104,12 +107,19 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LopHocPhanGV.aspx.cs">
-      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
+    <Compile Include="SinhvienHoso.aspx.cs">
+      <DependentUpon>SinhvienHoso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LopHocPhanGV.aspx.designer.cs">
-      <DependentUpon>LopHocPhanGV.aspx</DependentUpon>
+    <Compile Include="SinhvienHoso.aspx.designer.cs">
+      <DependentUpon>SinhvienHoso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SinhvienRenluyen.aspx.cs">
+      <DependentUpon>SinhvienRenluyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SinhvienRenluyen.aspx.designer.cs">
+      <DependentUpon>SinhvienRenluyen.aspx</DependentUpon>
     </Compile>
     <Compile Include="QLDiemGV.aspx.cs">
       <DependentUpon>QLDiemGV.aspx</DependentUpon>
@@ -138,12 +148,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ScoreManage.dbml</DependentUpon>
     </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="SVDiemTonghop.aspx.cs">
+      <DependentUpon>SVDiemTonghop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="SVDiemTonghop.aspx.designer.cs">
+      <DependentUpon>SVDiemTonghop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SVHome.aspx.cs">
+      <DependentUpon>SVHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SVHome.aspx.designer.cs">
+      <DependentUpon>SVHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SVProf.aspx.cs">
+      <DependentUpon>SVProf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SVProf.aspx.designer.cs">
+      <DependentUpon>SVProf.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
