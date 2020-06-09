@@ -174,7 +174,7 @@
     width: 50%;
     position: absolute;
     top: 90px;
-    right: 200px;
+    right: 300px;
     font-weight: bold;
     background-color: white;
     height: 270px;
@@ -183,7 +183,10 @@
     border-radius: 20px;
     padding-left: 100px;
 }
-#content .col-md-12, .col-md-5{
+#content .btn-info{
+    margin-top:40px;
+}
+#content .col-md-12, .col-md-4{
     padding: 0;
     margin-bottom: 15px;
 }

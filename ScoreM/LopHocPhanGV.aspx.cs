@@ -69,16 +69,71 @@ namespace ScoreM
 
         protected void btnXoa_Click(object sender, EventArgs e)
         {
+            string id = Session["id"].ToString();
             db = new ScoreManageDataContext();
-            
+            string IDT = Dlist.SelectedValue.ToString();
             DeleteModal.Visible = false;
-            Response.Write("<script>alert('Xóa thành công'); window.location.href='LopHocPhanGV.aspx';</script>");
+            var query = from l in db.Lecturers
+                        join en in db.Enrollments on l.ID equals en.IDLecturer
+                        join sc in db.Scores on en.ID equals sc.IDEnrollment
+                        join st in db.Students on sc.IDStudent equals st.ID
+                        join t in db.Terms on en.IDTerm equals t.ID
+                        where l.ID == id && t.ID == IDT && st.ID == svID.Text
+                        select sc;
+            db.Scores.DeleteAllOnSubmit(query);
+            db.SubmitChanges();
+            Dlist_SelectedIndexChanged(sender, e);
             
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             DeleteModal.Visible = false;
+        }
+
+        protected void btnkiemtra_Click(object sender, EventArgs e)
+        {
+            db = new ScoreManageDataContext();
+            AddModal.Visible = true;
+            var query = from st in db.Students
+                        where st.ID == txtaddSV.Text
+                        select st;
+            if (query.Any())
+            {
+                thongbao.Text = "Bạn có muốn thêm sinh viên: ";
+                lbNameSV.Text = query.First().FirstName +" "+ query.First().LastName;
+            }
+            else
+            {
+                thongbao.Text = "Sinh viên không tồn tại";
+                lbNameSV.Text = "";
+            }
+        }
+
+        protected void Cancel_Click(object sender, EventArgs e)
+        {
+            AddModal.Visible = false;
+        }
+
+        protected void btnThem_Click(object sender, EventArgs e)
+        {
+            string id = Session["id"].ToString();
+            string IDT = Dlist.SelectedValue.ToString();
+            db = new ScoreManageDataContext();
+            var query = from l in db.Lecturers
+                        join en in db.Enrollments on l.ID equals en.IDLecturer
+                        join sc in db.Scores on en.ID equals sc.IDEnrollment
+                        join st in db.Students on sc.IDStudent equals st.ID
+                        join t in db.Terms on en.IDTerm equals t.ID
+                        where l.ID == id && t.ID == IDT
+                        select en.ID;
+            Score mysc = new Score();
+            mysc.IDEnrollment = query.First();
+            mysc.IDStudent = txtaddSV.Text;
+            db.Scores.InsertOnSubmit(mysc);
+            db.SubmitChanges();
+            AddModal.Visible = false;
+            Dlist_SelectedIndexChanged(sender, e);
         }
     }
 }

@@ -91,7 +91,8 @@ namespace ScoreM
             myscore.Exam = Convert.ToDouble(txtthi.Text);
             db.SubmitChanges();
             EditModal.Visible = false;
-            Response.Redirect("QLDiemGV.aspx");
+            //Response.Redirect("QLDiemGV.aspx");
+            Dlist_SelectedIndexChanged(sender, e);
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

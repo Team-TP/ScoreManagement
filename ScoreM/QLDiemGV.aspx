@@ -105,10 +105,10 @@
                         </asp:BoundField>
                         <asp:BoundField DataField="LastName" HeaderText="Tên" HtmlEncode="False" />
                         <asp:BoundField DataField="Id" HeaderText="Mã sinh viên" HtmlEncode="False" />
-                        <asp:BoundField DataField="Diligent" HeaderText="Điểm chuyên cần" HtmlEncode="False" />
-                        <asp:BoundField DataField="MidTerm" HeaderText="Điểm GK" HtmlEncode="False" />
-                        <asp:BoundField DataField="Pratice" HeaderText="Điểm TH" HtmlEncode="False" />
-                        <asp:BoundField DataField="Exam" HeaderText="Điểm thi" HtmlEncode="False" />
+                        <asp:BoundField DataField="Diligent" HeaderText="Điểm chuyên cần" HtmlEncode="False" NullDisplayText=" " />
+                        <asp:BoundField DataField="MidTerm" HeaderText="Điểm GK" HtmlEncode="False" NullDisplayText=" " />
+                        <asp:BoundField DataField="Pratice" HeaderText="Điểm TH" HtmlEncode="False" NullDisplayText=" " />
+                        <asp:BoundField DataField="Exam" HeaderText="Điểm thi" HtmlEncode="False" NullDisplayText=" " />
                         <asp:BoundField HeaderText="Tổng kết" HtmlEncode="False" DataField="Tongket" />
                         <asp:ButtonField ButtonType="Button" CommandName="btnSua" ControlStyle-CssClass="btn btn-warning" HeaderText="Sửa" Text="Sửa" >                
                                                     <ControlStyle CssClass="btn btn-warning"></ControlStyle>

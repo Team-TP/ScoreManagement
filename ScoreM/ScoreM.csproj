@@ -102,6 +102,7 @@
     <Content Include="wwwroot\picture\logoVinh.png" />
     <Content Include="wwwroot\picture\LOGO_text.jpg" />
     <Content Include="wwwroot\picture\picNen.jpg" />
+    <Content Include="wwwroot\picture\trash-512.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Login.aspx.cs">

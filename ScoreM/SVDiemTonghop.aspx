@@ -18,11 +18,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="wwwroot/Picture/logoVinh.png">
     <link rel=" stylesheet " href="wwwroot/css2/StyleSVDiemTH.css ">
-    <style type="text/css">
-        .auto-style1 {
-            width: 389px
-        }
-    </style>
 
     <title>Thông tin sinh viên</title>
 </head>
@@ -90,6 +85,61 @@
             </div>
         </div>
         <!-- content -->
+        <div id="content">
+            <div class="col-md-12">
+                    <div class="col-md-2">
+                        <h4>Năm học</h4>
+                        <asp:DropDownList ID="DropNamhoc" CssClass ="form-control" runat="server" OnSelectedIndexChanged="DropNamhoc_SelectedIndexChanged" AutoPostBack="True">
+                            <asp:ListItem Value="0">---</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>                   
+                    <div class="col-md-2">
+                        <h4>Học kỳ</h4>
+                        <asp:DropDownList ID="Drophocky" CssClass="form-control" runat="server" AutoPostBack="True">
+                            <asp:ListItem Value="0">---</asp:ListItem>
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Môn học</h4>
+                        <asp:DropDownList ID="DropMonhoc" CssClass="form-control" runat="server" AutoPostBack="True">
+                            <asp:ListItem Selected="True" Value="0">---</asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+                    <div class="col-md-1">
+                        <asp:Button Text="Xem" ID="btnXem" class="btn btn-success" runat="server" OnClick="btnXem_Click" />
+                    </div>
+                </div>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="958px" Height="133px">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:TemplateField HeaderText="STT">
+                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemTemplate>
+                            <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="Name" HeaderText="Tên môn" HtmlEncode="False" />
+                    <asp:BoundField DataField="Diligent" HeaderText="Điểm chuyên cần" />
+                    <asp:BoundField DataField="MidTerm" HeaderText="Điểm giữa kỳ" />
+                    <asp:BoundField DataField="Pratice" HeaderText="Điểm thực hành" />
+                    <asp:BoundField DataField="Exam" HeaderText="Điểm thi" />
+                    <asp:BoundField DataField="Tongket" HeaderText="Điểm tổng kết" />
+                    <asp:BoundField DataField="Diemhe4" HeaderText="Điểm hệ 4" />
+                </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+            </asp:GridView>
+        </div>
         <!-- footer -->
 
         <footer>

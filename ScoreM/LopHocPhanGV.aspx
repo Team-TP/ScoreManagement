@@ -91,14 +91,17 @@
         <div id="content">
             <div class="content">
                 <div class="col-md-12">
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <h4>Lớp học phần</h4>
                         <asp:DropDownList ID="Dlist" runat="server" AutoPostBack="True" ControlStyle-CssClass="form-control" OnSelectedIndexChanged="Dlist_SelectedIndexChanged"></asp:DropDownList>
                     </div>
                     <div class="col-md-1"></div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <h4>Thêm sinh viên ngoài danh sách</h4>
-                        <asp:TextBox ID="txtaddSV" runat="server" CssClass="form-control" placeholder="Nhập mã sinh viên"></asp:TextBox>
+                        <asp:TextBox ID="txtaddSV" runat="server" CssClass="form-control" placeholder="Nhập mã sinh viên"></asp:TextBox>                       
+                    </div>
+                    <div class="col-md-1">
+                        <asp:Button Text="Kiểm tra" ID="btnkiemtra" CssClass="btn btn-info" runat="server" OnClick="btnkiemtra_Click" />
                     </div>
                 </div>
                 <div class="gridview">
@@ -143,9 +146,19 @@
 
                     <br />
                     <br />
-                    <asp:Button ID="btnXoa" runat="server" class="btn btn-danger" Text="Xóa" OnClick="btnXoa_Click" />&emsp;&emsp;
+                    <asp:Button ID="btnXoa" runat="server" class="btn btn-danger" Text="Delete" OnClick="btnXoa_Click" />&emsp;&emsp;
                     <asp:Button ID="btnCancel" Class="btn btn-warning" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
 
+                </div>
+                <div id="AddModal" class="textbox" runat="server" visible="false">
+                    <h3>
+                        <asp:Label ID="thongbao" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lbNameSV" runat="server" Text=""></asp:Label>
+                    </h3>
+                    <br />
+                    <br />
+                    <asp:Button ID="btnThem" runat="server" class="btn btn-success" Text="Add" OnClick="btnThem_Click"  />&emsp;&emsp;
+                    <asp:Button ID="Cancel" Class="btn btn-warning" Text="Cancel" runat="server" OnClick="Cancel_Click"  />
                 </div>
             </div>
         </div>
