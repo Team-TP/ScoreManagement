@@ -155,8 +155,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style1"></td>
-                        <td>
+                        <td colspan="2" style="padding-left: 260px;">
                             <br />
                             <asp:Button ID="btnCapnhat" runat="server" class="login100-form-btn" Text="Cập nhật" OnClick="btnCapnhat_Click"></asp:Button>
                         </td>

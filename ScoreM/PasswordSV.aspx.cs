@@ -20,9 +20,8 @@ namespace ScoreM
         {
             string id = Session["id"].ToString();
             db = new ScoreManageDataContext();
-            var query = from i in db.Accounts
-                       
-                        where i.Username == id 
+            var query = from i in db.Accounts                      
+                        where i.Username == id && i.Password == txtPass.Text
                         select i;
             if(query.Any())
             {
@@ -41,7 +40,7 @@ namespace ScoreM
             }
             else 
             {
-                Response.Write("<script>alert('Mật khẩu cũ sai!');</script>");
+                Response.Write("<script>alert('Mật khẩu cũ sai!'); window.location.href = 'PasswordSV.aspx'</script>");
             }
         }
     }

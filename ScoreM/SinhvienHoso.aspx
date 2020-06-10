@@ -103,7 +103,7 @@
             <div class="content">
                 <h1>Hồ sơ sinh viên</h1>
                 <br />
-                <table style="width: 70%;">
+                <table style="width: 60%;">
                     <tr>
                         <td class="auto-style1">Mã sinh viên</td>
                         <td>

@@ -168,10 +168,14 @@
 .content {
     margin-left: 100px;
 }
-#content h3 {
-    margin-left: 400px;
+.content h1 {
+    padding-left: 350px;
     margin-bottom: 30px;
+    font-weight: bold;
+    font-family: initial;
+    font-size: 40px;
 }
+
 #content table tr {
     height: 40px;
 }

@@ -167,17 +167,20 @@
     margin-top: 50px;
     padding-left: 200px;
 }
-.content h1 {
-    width: 400px;
-    position: relative;
-    left: 155px;
-}
+
 #content table tr {
     height: 40px;
 }
-
+.content h1 {
+    padding-left: 200px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: initial;
+    font-size: 40px;
+}
     #content table tr td input {
         box-shadow: 1px 1px 5px 0px gray;
+        margin-bottom: 10px;
     }
 
     #content table tr td {
@@ -271,7 +274,7 @@
 }
 
 .login100-form-btn:hover {
-        background-color: #333333;
+    background-color: #31b0d5;
 }
 /*input{
     padding-left:10px;

@@ -93,7 +93,7 @@
         <!-- content -->
         <div id="content">
             <div class="content">
-                <h3>Điểm rèn luyện</h3>
+                <h1>Điểm rèn luyện</h1>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="923px">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>

@@ -121,7 +121,9 @@
                             <asp:BoundField DataField="LastName" HeaderText="Tên" HtmlEncode="False" />
                             <asp:BoundField DataField="Id" HeaderText="Mã sinh viên" HtmlEncode="False" />
                             <asp:BoundField DataField="DateOfBirth" HeaderText="Ngày sinh" HtmlEncode="False" />
-                            <asp:ButtonField ButtonType="Image" CommandName="btnXoa" ControlStyle-Height="25px" ControlStyle-Width="25px" HeaderText="Xóa sv" ImageUrl="https://img.icons8.com/fluent/48/000000/delete-sign.png"></asp:ButtonField>
+                            <asp:ButtonField ButtonType="Image" CommandName="btnXoa" ControlStyle-Height="25px" ControlStyle-Width="25px" HeaderText="Xóa sinh viên" ImageUrl="~/wwwroot/picture/delete.png">
+<ControlStyle Height="25px" Width="25px"></ControlStyle>
+                            </asp:ButtonField>
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

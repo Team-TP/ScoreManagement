@@ -112,9 +112,8 @@
                             <asp:TextBox ID="txtrePass" runat="server" Width="255px" Class="form-control"></asp:TextBox>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="auto-style1"></td>
-                        <td>
+                    <tr>                       
+                        <td colspan="2" style="padding-left: 248px;">
                             <br />
                             <asp:Button ID="btnChange" runat="server" class="login100-form-btn" Text="Đổi mật khẩu" OnClick="btnChange_Click"></asp:Button>
                         </td>
