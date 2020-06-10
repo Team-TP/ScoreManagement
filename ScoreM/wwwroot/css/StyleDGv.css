@@ -158,7 +158,9 @@
 }
 .content{
     margin-top: 100px;
-
+}
+.textbox .btn-success {
+    margin-left: 100px;
 }
 #content table tr{
     height:40px;
@@ -171,6 +173,10 @@
 }
 #content .gridview {
     margin-top: 75px;
+}
+#content .col-md-12, .col-md-4 {
+    padding: 0;
+    margin-bottom: 15px;
 }
 #content .textbox {
     width: 60%;

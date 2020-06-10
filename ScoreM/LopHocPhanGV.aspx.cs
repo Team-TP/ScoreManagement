@@ -88,7 +88,7 @@ namespace ScoreM
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            DeleteModal.Visible = false;
+            DeleteModal.Visible = false;         
         }
 
         protected void btnkiemtra_Click(object sender, EventArgs e)
@@ -100,19 +100,35 @@ namespace ScoreM
                         select st;
             if (query.Any())
             {
-                thongbao.Text = "Bạn có muốn thêm sinh viên: ";
-                lbNameSV.Text = query.First().FirstName +" "+ query.First().LastName;
+                var query2 = from i in db.Students
+                             join sc in db.Scores on i.ID equals sc.IDStudent
+                             where sc.IDStudent == query.First().ID
+                             select sc;
+                if (query2.Any())
+                {
+                    thongbao.Text = "Sinh viên đã tồn tại trong lớp";
+                    lbNameSV.Text = "";
+                    btnThem.Visible = false;
+                }
+                else
+                {
+
+                    thongbao.Text = "Bạn có muốn thêm sinh viên: ";
+                    lbNameSV.Text = query.First().FirstName + " " + query.First().LastName;
+                }
             }
             else
             {
                 thongbao.Text = "Sinh viên không tồn tại";
                 lbNameSV.Text = "";
+                btnThem.Visible = false;
             }
         }
 
         protected void Cancel_Click(object sender, EventArgs e)
         {
             AddModal.Visible = false;
+            btnThem.Visible = true;
         }
 
         protected void btnThem_Click(object sender, EventArgs e)

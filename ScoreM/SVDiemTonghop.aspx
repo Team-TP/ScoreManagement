@@ -111,7 +111,7 @@
                         <asp:Button Text="Xem" ID="btnXem" class="btn btn-success" runat="server" OnClick="btnXem_Click" />
                     </div>
                 </div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="958px" Height="133px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="959px" Height="179px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:TemplateField HeaderText="STT">

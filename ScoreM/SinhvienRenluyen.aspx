@@ -17,11 +17,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="shortcut icon" href="wwwroot/Picture/logoVinh.png">
     <link rel=" stylesheet " href="wwwroot/css2/StyleDiemRL.css ">
-    <style type="text/css">
-        .auto-style1 {
-            width: 389px
-        }
-    </style>
 
     <title>Điểm rèn luyện</title>
 </head>
@@ -72,12 +67,13 @@
                     <img class="imglogo" src="wwwroot/picture/LOGO_text.jpg" alt="" height="50" style="background-image: none;">
                     <a href="# "><i class="fas fa-users fw"></i>Đăng kí học<i class="fas fa-angle-right ed"></i></a>
                     <a href="SVDiemTonghop.aspx"><i class="fas fa-seedling fw"></i>Tra cứu điểm tổng hợp</a>
-                       <a> <i class="fas fa-address-card fw fd"></i>Thông tin cá nhân<i class="fas fa-angle-down ed"></i>
-                            <a href="#">Xem điểm theo lớp<br /> và môn học</a>
-                            <a href="#">Tra cứu điểm<i class="fas fa-angle-right ed"></i></a>
-                            <a href="SinhvienRenluyen.aspx">Tra cứu điểm rèn luyện</a>
-                            <a href="SinhvienHoso.aspx">Thông tin hồ sơ sinh viên</a>
-                        </a>
+                    <a><i class="fas fa-address-card fw fd"></i>Thông tin cá nhân<i class="fas fa-angle-down ed"></i>
+                        <a href="#">Xem điểm theo lớp<br />
+                            và môn học</a>
+                        <a href="#">Tra cứu điểm<i class="fas fa-angle-right ed"></i></a>
+                        <a href="SinhvienRenluyen.aspx">Tra cứu điểm rèn luyện</a>
+                        <a href="SinhvienHoso.aspx">Thông tin hồ sơ sinh viên</a>
+                    </a>
 
                     <a href="PasswordSV.aspx"><i class="fas fa-key fw "></i>Quản lý mật khẩu </a>
 
@@ -95,7 +91,38 @@
             </div>
         </div>
         <!-- content -->
-
+        <div id="content">
+            <div class="content">
+                <h3>Điểm rèn luyện</h3>
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="923px">
+                    <AlternatingRowStyle BackColor="White" />
+                    <Columns>
+                        <asp:TemplateField HeaderText="STT">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex + 1 %>
+                            </ItemTemplate>
+                            <FooterStyle HorizontalAlign="Center" />
+                            <HeaderStyle HorizontalAlign="Center" />
+                            <ItemStyle HorizontalAlign="Center" />
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="SchoolYear" HeaderText="Năm học" HtmlEncode="False" />
+                        <asp:BoundField DataField="Semester" HeaderText="Học kỳ" />
+                        <asp:BoundField DataField="ScoreOfConduct" HeaderText="Điểm rèn luyện" />
+                        <asp:BoundField DataField="Classification" HeaderText="Xếp loại" HtmlEncode="False" />
+                    </Columns>
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>
+            </div>
+        </div>
         <!-- footer -->
 
         <footer>

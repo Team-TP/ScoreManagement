@@ -157,7 +157,7 @@
                     </h3>
                     <br />
                     <br />
-                    <asp:Button ID="btnThem" runat="server" class="btn btn-success" Text="Add" OnClick="btnThem_Click"  />&emsp;&emsp;
+                    <asp:Button ID="btnThem" runat="server" class="btn btn-success" Text="Add" Visible="true" OnClick="btnThem_Click"  />&emsp;&emsp;
                     <asp:Button ID="Cancel" Class="btn btn-warning" Text="Cancel" runat="server" OnClick="Cancel_Click"  />
                 </div>
             </div>

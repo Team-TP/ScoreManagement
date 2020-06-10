@@ -99,7 +99,69 @@
             </div>
         </div>
         <!-- content -->
+        <div id="content">
+            <div class="content">
+                <h1>Hồ sơ sinh viên</h1>
+                <br />
+                <table style="width: 70%;">
+                    <tr>
+                        <td class="auto-style1">Mã sinh viên</td>
+                        <td>
+                            <asp:TextBox ID="txtMasv" runat="server" Width="400px" Class="form-control" BackColor="#CCCCCC" Enabled="False"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Họ và tên đệm</td>
+                        <td>
+                            <asp:TextBox ID="txtFname" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Tên</td>
+                        <td>
+                            <asp:TextBox ID="txtLname" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Ngày sinh </td>
+                        <td>
+                            <asp:TextBox ID="txtNgaysinh" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Giới tính</td>
+                        <td>
+                            <asp:TextBox ID="txtGioitinh" runat="server" Width="400px" Class="form-control"></asp:TextBox>
 
+                            <%--<asp:DropDownList ID="txtGioitinh" runat="server" Width="400px" Class="form-control" AutoPostBack="True">
+                                <asp:ListItem>Nữ</asp:ListItem>
+                                <asp:ListItem>Nam</asp:ListItem>
+                            </asp:DropDownList>--%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Địa chỉ</td>
+                        <td>
+                            <asp:TextBox ID="txtDiachi" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Điện thoại</td>
+                        <td>
+                            <asp:TextBox ID="txtDienthoai" runat="server" Width="400px" Class="form-control"></asp:TextBox>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="auto-style1"></td>
+                        <td>
+                            <br />
+                            <asp:Button ID="btnCapnhat" runat="server" class="login100-form-btn" Text="Cập nhật" OnClick="btnCapnhat_Click"></asp:Button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <!-- footer -->
 
         <footer>

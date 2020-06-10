@@ -309,7 +309,7 @@ sidenav .dropdown-content a {
 
 
 /*footer-end*/
-/*.login100-form-btn {
+.login100-form-btn {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -318,8 +318,8 @@ sidenav .dropdown-content a {
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
+    min-width: 140px;
+    height: 40px;
     background-color: #57b846;
     border-radius: 25px;
     font-family: Poppins-Regular;
@@ -337,4 +337,4 @@ sidenav .dropdown-content a {
 }
 input{
     padding-left:10px;
-}*/
+}

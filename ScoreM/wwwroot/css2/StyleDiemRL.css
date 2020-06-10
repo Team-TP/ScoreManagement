@@ -166,9 +166,12 @@
 }
 
 .content {
-    margin-top: 100px;
+    margin-left: 100px;
 }
-
+#content h3 {
+    margin-left: 400px;
+    margin-bottom: 30px;
+}
 #content table tr {
     height: 40px;
 }

@@ -83,7 +83,7 @@
         </div>
         <!-- content -->
         <div id="content">
-            <p>Lớp học phần</p>
+            <h4>Lớp học phần</h4>
             <div class="col-md-12">
                 <div class="col-md-4">
                     <asp:DropDownList ID="Dlist" runat="server" AutoPostBack="True" ControlStyle-CssClass="form-control" OnSelectedIndexChanged="Dlist_SelectedIndexChanged"></asp:DropDownList>
@@ -146,7 +146,7 @@
                     <br />
                     <br />
                     <asp:Button ID="btnSave" runat="server" class="btn btn-success" Text="Save" OnClick="btnSave_Click" />&emsp;&emsp;
-                    <asp:Button ID="btnCancel" Class="btn btn-warning" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+                    <asp:Button ID="btnCancel" Class="btn btn-danger" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
                 </div>
                 <div class="col-md-6">
                     <table>
