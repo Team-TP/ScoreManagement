@@ -127,6 +127,7 @@
                     <asp:BoundField DataField="Exam" HeaderText="Điểm thi" />
                     <asp:BoundField DataField="Tongket" HeaderText="Điểm tổng kết" />
                     <asp:BoundField DataField="Diemhe4" HeaderText="Điểm hệ 4" />
+                    <asp:BoundField DataField="Evaluate" HeaderText="Đánh giá" HtmlEncode="False" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

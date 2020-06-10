@@ -46,8 +46,17 @@ namespace ScoreM
                         join st in db.Students on sc.IDStudent equals st.ID
                         join t in db.Terms on en.IDTerm equals t.ID
                         where l.ID == id && t.ID == IDT
-                        select new { st.FirstName, st.LastName, st.ID, sc.Diligent, sc.Pratice, sc.MidTerm, sc.Exam, 
-                          Tongket = (((double)sc.Diligent*0.1 + (double)sc.MidTerm*0.2 + ((double)sc.Exam*45+ (double)sc.Pratice*15))/60).ToString().Substring(0,4) };
+                        select new
+                        {
+                            st.FirstName,
+                            st.LastName,
+                            st.ID,
+                            sc.Diligent,
+                            sc.Pratice,
+                            sc.MidTerm,
+                            sc.Exam,
+                            Tongket = ((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + (((double)sc.Exam * 45 + (double)sc.Pratice * 15) / 60) * 0.7).ToString().Substring(0, 4)
+                        };
             GridView1.DataSource = query;
             GridView1.DataBind();
 
@@ -67,7 +76,7 @@ namespace ScoreM
                 txtth.Text = GridView1.Rows[row].Cells[6].Text;
                 txtthi.Text = GridView1.Rows[row].Cells[7].Text;
 
-                
+
             }
         }
 
@@ -89,6 +98,15 @@ namespace ScoreM
             myscore.MidTerm = Convert.ToDouble(txtgk.Text);
             myscore.Pratice = Convert.ToDouble(txtth.Text);
             myscore.Exam = Convert.ToDouble(txtthi.Text);
+            double tongket = (Convert.ToDouble(txtcc.Text) * 0.1 + Convert.ToDouble(txtgk.Text) * 0.2 + (Convert.ToDouble(txtthi.Text) * 45 + Convert.ToDouble(txtth.Text) * 15) / 60) * 0.7;
+            if (tongket > 4.0)
+            {
+                myscore.Evaluate = "DAT";
+            }
+            else
+            {
+                myscore.Evaluate = "KHONG DAT";
+            }
             db.SubmitChanges();
             EditModal.Visible = false;
             //Response.Redirect("QLDiemGV.aspx");

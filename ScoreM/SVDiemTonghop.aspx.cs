@@ -38,8 +38,9 @@ namespace ScoreM
                                 sc.MidTerm,
                                 sc.Pratice,
                                 sc.Exam,
-                                Tongket = (((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + ((double)sc.Exam * 45 + (double)sc.Pratice * 15)) / 60).ToString().Substring(0, 4),  
-                                Diemhe4 = (((((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + ((double)sc.Exam * 45 + (double)sc.Pratice * 15)) / 60)*4)/10).ToString().Substring(0,4)
+                                Tongket = ((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + (((double)sc.Exam * 45 + (double)sc.Pratice * 15) / 60) * 0.7).ToString().Substring(0, 4),  
+                                Diemhe4 = ((((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + (((double)sc.Exam * 45 + (double)sc.Pratice * 15) / 60) * 0.7) *4 ) / 10).ToString().Substring(0,4),
+                                sc.Evaluate
                             };
                 
                 GridView1.DataSource = query;
@@ -69,7 +70,8 @@ namespace ScoreM
                             sc.Pratice,
                             sc.Exam,
                             Tongket = (((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + ((double)sc.Exam * 45 + (double)sc.Pratice * 15)) / 60).ToString().Substring(0, 4),
-                            Diemhe4 = (((((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + ((double)sc.Exam * 45 + (double)sc.Pratice * 15)) / 60) * 4) / 10).ToString().Substring(0, 4)
+                            Diemhe4 = (((((double)sc.Diligent * 0.1 + (double)sc.MidTerm * 0.2 + ((double)sc.Exam * 45 + (double)sc.Pratice * 15)) / 60) * 4) / 10).ToString().Substring(0, 4),
+                            sc.Evaluate
                         };
             GridView1.DataSource = query;
             GridView1.DataBind();

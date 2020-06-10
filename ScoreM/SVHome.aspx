@@ -90,7 +90,7 @@
             </div>
         </div>
         <!-- content -->
-        <img class="content" src="wwwroot/picture/picNen.jpg" style=" margin-top: 49px;padding-left: 300px;" />
+        <img class="content" src="wwwroot/picture/picNen.jpg" style=" margin-top: 49px;padding-left: 250px;" />
         <!-- footer -->
 
         <footer>
